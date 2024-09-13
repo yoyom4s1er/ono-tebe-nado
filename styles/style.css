@@ -11,22 +11,22 @@ a {
 }
 
 address {
-    width: 240px;
+    max-width: 240px;
     font-style: normal;
 }
 
-address a{
+address a {
     text-decoration: underline;
     font-size: 18px;
     font-weight: 400;
-    line-height: 24.3px;
+    line-height: 1.35em;
     letter-spacing: 0.01em;
 }
 
 address span {
     font-size: 18px;
     font-weight: 400;
-    line-height: 24.3px;
+    line-height: 1.35em;
 }
 
 nav {
@@ -36,7 +36,7 @@ nav {
 
     font-size: 18px;
     font-weight: 400;
-    line-height: 21.13px;
+    line-height: 1.17em;
     letter-spacing: 0.01em;
 }
 
@@ -44,41 +44,55 @@ nav a:first-child {
     text-decoration: none;
 }
 
+.background-image {
+    display: block;
+    object-fit: cover;
+    filter: brightness(40%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
 
 /* Начало шапки */
-header {
+.header {
     width: 1052px;
     height: 105px;
-    margin-left: 24px;
-    padding-left: 26.5px;
-    padding-right: 25.5px;
+    margin-left: auto;
+    margin-right: auto;
+
+    padding-left: 27px;
+    padding-right: 26px;
 
     display: grid;
     align-items: center;
     grid-template-columns: 1fr 148px 1fr;
 }
 
-header .logo {
+.header .logo {
     height: 105px;
     width: 148px;
     display: block;
 }
 
-header a img {
+.header a img {
     height: 100%;
 }
 
-header nav {
+.header nav {
     position: relative;
     top: 3px;
 }
 
-header nav a:not(:first-child) {
+.header nav a:not(:first-child) {
     padding-left: 31px;
     position: relative;
 }
 
-header nav a:not(:first-child):before {
+.header nav a:not(:first-child):before {
     display: block;
     position: absolute;
     left: 13px;
@@ -90,29 +104,19 @@ header nav a:not(:first-child):before {
     height: 7px;
 }
 
-header address {
+.header address {
     justify-self: end;
     align-self: flex-start;
     padding-top: 5px;
 }
-
 /* Конец шапки */
 
 /* Начало первой секции */
 .cover {
     margin-top: 96px;
-
-    content: '';
-    background:
-        linear-gradient(
-            rgba(0, 0, 0, 0.5), 
-            rgba(0, 0, 0, 0.5)
-            ),
-         url('../images/lotus-flower.jpg');
-    background-size: 1100px 757px;
-    background-repeat: no-repeat;
     width: 1100px;
     height: 757px;
+    position: relative;
 }
 
 .first-section-title {
@@ -122,7 +126,7 @@ header address {
 
     font-size: 100px;
     font-weight: 700;
-    line-height: 115px;
+    line-height: 1.15em;
     letter-spacing: 0.3em;
     text-align: left;
     color: white;
@@ -172,7 +176,7 @@ header address {
     color: white;
     font-size: 22px;
     font-weight: 400;
-    line-height: 28px;
+    line-height: 1.27em;
     text-align: left;
     text-transform: uppercase;
     word-spacing: 18.5px;
@@ -180,22 +184,23 @@ header address {
     top: 1px;
 }
 
-.cover footer button{
+.cover footer button {
     font-size: 22px;
     font-weight: 500;
-    line-height: 25.83px;
+    line-height: 1.17em;
     text-align: center;
 
     background-color: rgba(0, 0, 0, 0);
     color: white;
     border-color: white;
-
+    border: none;
+    outline: 1px solid;
+    border-color: white;
     width: 256px;
     height: 51px;
 
     cursor: pointer;
 }
-
 /* Конеч первой секции */
 
 /* Начало второй секции */
@@ -209,12 +214,12 @@ header address {
 .lots h2 {
     font-size: 40px;
     font-weight: 700;
-    line-height: 46.96px;
+    line-height: 1.175;
     text-align: left;
     margin-left: 40px;
 }
 
-.lots ul{
+.lots ul {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 25px;
@@ -247,31 +252,20 @@ header address {
     justify-content: space-between;
 }
 
-.lots article img {
-    display: block;
-    object-fit: cover;
-    filter: brightness(50%);
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
-}
-
 .lots article h3 {
     text-transform: uppercase;
     font-size: 22px;
     font-weight: 700;
-    line-height: 26.4px;
+    line-height: 1.2em;
     text-decoration: underline;
     text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
 }
 
 .lots article p {
     font-size: 20px;
     font-weight: 400;
-    line-height: 24px;
+    line-height: 1.2em;
 }
 
 .lots .see-more {
@@ -280,12 +274,11 @@ header address {
     margin-top: 30px;
     font-size: 20px;
     font-weight: 400;
-    line-height: 23.48px;
+    line-height: 1.174em;
 }
 /* Конец второй секции*/
 
 /* Начало третьей секции*/
-
 .about {
     width: 1052px;
     margin-top: 146px;
@@ -296,13 +289,21 @@ header address {
     grid-template-columns: 334px 1fr;
 }
 
-.about .about-logo {
+.about .about-logo-container {
     width: 240px;
     height: 240px;
     background-color: black;
     border-radius: 50%;
     justify-self: center;
     margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about .about-logo {
+    width: 62%;
+    height: 62%;
 }
 
 .about .about-text-zone {
@@ -314,7 +315,7 @@ header address {
     text-transform: uppercase;
     font-size: 40px;
     font-weight: 700;
-    line-height: 46.96px;
+    line-height: 1.175em;
     position: relative;   
 }
 
@@ -328,12 +329,12 @@ header address {
 .about p {
     font-size: 20px;
     font-weight: 400;
-    line-height: 24px;
+    line-height: 1.2em;
     letter-spacing: 0.01em;
 }
-
 /* Конец третьей секции*/
 
+/* Начало футера*/
 .footer {
     width: 1000px;
     margin-top: 180px;
@@ -363,3 +364,4 @@ header address {
     width: 48px;
     height: 48px;
 }
+/* Конец футера*/
