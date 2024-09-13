@@ -139,28 +139,23 @@ nav a:first-child {
     row-gap: 5px;
 }
 
-.first-section-title .title-second-word {
+.first-section-title .title-text-aligned-center {
     align-self: center;
     position: relative;
     left: -3px;
     top: 7px;
 }
 
-.first-section-title .title-third-word {
+.first-section-title .title-text-aligned-end {
     align-self: flex-end;
     position: relative;
     left: 50px;
     top: 7px;
 }
 
-.first-section-title div span:last-child {
+.first-section-title span span:last-child {
     position: relative;
-    left: -24px;
-}
-
-.first-section-title div:last-child span:last-child {
-    position: relative;
-    left: -20px;
+    left: -22px;
 }
 
 .cover footer {
