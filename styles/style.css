@@ -1,11 +1,55 @@
 /* место для вашего кода */
 
+body {
+    margin-top: 92px;
+    margin-bottom: 88px;
+}
+
+a {
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+}
+
+address {
+    width: 240px;
+    font-style: normal;
+}
+
+address a{
+    text-decoration: underline;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24.3px;
+    letter-spacing: 0.01em;
+}
+
+address span {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24.3px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    align-self: center;
+
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.13px;
+    letter-spacing: 0.01em;
+}
+
+nav a:first-child {
+    text-decoration: none;
+}
+
+
 /* Начало шапки */
 header {
     width: 1052px;
     height: 105px;
     margin-left: 24px;
-    margin-top: 92px;
     padding-left: 26.5px;
     padding-right: 25.5px;
 
@@ -25,24 +69,12 @@ header a img {
 }
 
 header nav {
-    display: flex;
-    align-items: center;
-    align-self: center;
-
     position: relative;
     top: 3px;
-
-    font-family: Raleway;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 21.13px;
-    letter-spacing: 0.01em;
 }
 
 header nav a:not(:first-child) {
     padding-left: 31px;
-    text-underline-offset: 4px;
-    text-decoration-thickness: 2px;
     position: relative;
 }
 
@@ -58,42 +90,16 @@ header nav a:not(:first-child):before {
     height: 7px;
 }
 
-header nav a:first-child {
-    text-decoration: none;
-}
-
 header address {
     justify-self: end;
     align-self: flex-start;
-    width: 240px;
-    margin-top: 5px;
-
-    font-style: normal;
-}
-
-header address a{
-    text-decoration: underline;
-    font-family: Raleway;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 24.3px;
-    letter-spacing: 0.01em;
-
-    text-underline-offset: 4px;
-    text-decoration-thickness: 0.5px;
-}
-
-header address span {
-    font-family: Raleway;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 24.3px;
+    padding-top: 5px;
 }
 
 /* Конец шапки */
 
 /* Начало первой секции */
-section:first-child {
+.cover {
     margin-top: 96px;
 
     content: '';
@@ -153,7 +159,7 @@ section:first-child {
     left: -20px;
 }
 
-section:first-child footer {
+.cover footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -162,7 +168,7 @@ section:first-child footer {
     margin-top: 135px;
 }
 
-section:first-child footer span {
+.cover footer span {
     color: white;
     font-size: 22px;
     font-weight: 400;
@@ -174,7 +180,7 @@ section:first-child footer span {
     top: 1px;
 }
 
-section:first-child footer button{
+.cover footer button{
     font-size: 22px;
     font-weight: 500;
     line-height: 25.83px;
@@ -192,14 +198,168 @@ section:first-child footer button{
 
 /* Конеч первой секции */
 
-.second-section {
+/* Начало второй секции */
+.lots {
     margin-top: 179px;
+    max-width: 1052px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.second-section h1 {
+.lots h2 {
     font-size: 40px;
     font-weight: 700;
     line-height: 46.96px;
     text-align: left;
     margin-left: 40px;
+}
+
+.lots ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 25px;
+    row-gap: 25px;
+    justify-items: center;
+    list-style-type: none;
+    margin-top: 27px;
+}
+
+.lots ul li {
+    width: 334px;
+    min-height: 563px;
+    position: relative;
+}
+
+.lots ul li a {
+    text-decoration: none;
+}
+
+.lots article {
+    width: 100%;
+    height: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 51px;
+    padding-bottom: 48px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.lots article img {
+    display: block;
+    object-fit: cover;
+    filter: brightness(50%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.lots article h3 {
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 26.4px;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.lots article p {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.lots .see-more {
+    display: block;
+    margin-left: 40px;
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 23.48px;
+}
+/* Конец второй секции*/
+
+/* Начало третьей секции*/
+
+.about {
+    width: 1052px;
+    margin-top: 146px;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: grid;
+    grid-template-columns: 334px 1fr;
+}
+
+.about .about-logo {
+    width: 240px;
+    height: 240px;
+    background-color: black;
+    border-radius: 50%;
+    justify-self: center;
+    margin-top: 35px;
+}
+
+.about .about-text-zone {
+    padding-top: 136px;
+    padding-left: 25px;
+}
+
+.about h2 {
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 46.96px;
+    position: relative;   
+}
+
+.about .about-text {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+}
+
+.about p {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+}
+
+/* Конец третьей секции*/
+
+.footer {
+    width: 1000px;
+    margin-top: 180px;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.footer nav {
+    flex-direction: column;
+    align-self:flex-start;
+}
+
+.footer .footer-social-list {
+    display: flex;
+    column-gap: 48px;
+    justify-content: end;
+    align-items: start;
+    height: 100%;
+    flex-wrap: wrap;
+}
+
+.footer .footer-social-list img {
+    width: 48px;
+    height: 48px;
 }
